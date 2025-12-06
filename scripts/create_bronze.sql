@@ -10,9 +10,9 @@ CREATE TABLE bronze.crm_cust_info (
 	cst_create_date DATE
 );
 
-IF OBJECT_ID ('bronze.crm_prd_id', 'U') IS NOT NULL
-	DROP TABLE bronze.crm_prd_id;
-CREATE TABLE bronze.crm_prd_id (
+IF OBJECT_ID ('bronze.crm_prd_info', 'U') IS NOT NULL
+	DROP TABLE bronze.crm_prd_info;
+CREATE TABLE bronze.crm_prd_info (
 	prd_id INT,
 	prd_key NVARCHAR(50),
 	prd_nm NVARCHAR(50),
@@ -51,7 +51,7 @@ CREATE TABLE bronze.erp_cust_az12 (
 	gen NVARCHAR(50)
 );
 
-IF OBJECT_ID ('erp_px_cat_g1v2', 'U') IS NOT NULL
+IF OBJECT_ID ('bronze.erp_px_cat_g1v2', 'U') IS NOT NULL
 	DROP TABLE bronze.erp_px_cat_g1v2;
 CREATE TABLE bronze.erp_px_cat_g1v2 (
 	id NVARCHAR(50),
